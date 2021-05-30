@@ -1,0 +1,1473 @@
+:root {
+  --primary-color: #b8b8b8;
+  --d-color: black;
+  --gr-color: #383838;
+  --g-color: #00cc66;
+  --r-color: #ff0000;
+  --b-color: #6600cc;
+  --body-color: #f0f0f0;
+  --rose-color: rgb(247, 88, 114);
+  --w-color: #fff;
+  --c-font: "Calibri";
+  --size-font: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--c-font);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: var(--body-color);
+  width: 100%;
+  position: relative;
+  min-height: 100%;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+button {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+hr {
+  height: 4px;
+  background-color: var(--primary-color);
+}
+/* Nav Nav Nav Nav Nav Nav Nav Nav Nav Nav Nav Nav Nav Nav Nav Nav Nav Nav Nav Nav Nav Nav Nav Nav  */
+
+.settings {
+  color: var(--gr-color);
+  padding-top: 18px;
+  font-size: 20px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin-top: 2.4rem;
+}
+
+ul a {
+  text-decoration: none;
+  color: var(--primary-color);
+  margin-right: 40px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.active {
+  color: var(--rose-color);
+  border: 1px;
+  border-bottom: solid;
+}
+
+/* SideMenu SideMenu SideMenu SideMenu SideMenu SideMenu SideMenu SideMenu SideMenu SideMenu */
+
+.sidemenu {
+  background-color: #202020;
+  width: 5%;
+  position: fixed;
+  top: 0;
+  height: 100%;
+}
+
+.sideicons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.sm {
+  color: var(--w-color);
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.sm.smset {
+  background-color: #4d4c4c;
+  width: 100%;
+  height: 30px;
+  border-left: 5px solid;
+  border-left-color: var(--rose-color);
+  /* padding: auto; */
+  text-align: center;
+  margin-top: 13em;
+}
+
+.sm.smset .smfiset {
+  margin-top: 0.5em;
+  opacity: 100%;
+}
+
+.avatar {
+  margin-top: -1rem;
+  width: 100%;
+  height: 4em;
+  cursor: pointer;
+  background-color: #4d4c4c;
+  color: var(--w-color);
+  text-align: center;
+  padding-top: 21px;
+}
+
+.avatar strong {
+  background-color: var(--b-color);
+  border-radius: 5px;
+  padding: 4px 6px;
+  border: 1.5px solid;
+  border-color: var(--w-color);
+  font-weight: bold;
+  /* margin-right: 20rem; */
+}
+
+/*Sidemenu open Sidemenu open Sidemenu open Sidemenu open Sidemenu open Sidemenu open Sidemenu open*/
+
+.userpilotlogo {
+  margin-left: 10px;
+}
+.smo1,
+.smo2,
+.smo3,
+.smo4,
+.smo5,
+.smo6 {
+  padding-top: 15px;
+  padding-bottom: 8px;
+  font-size: 0.85em;
+  font-weight: bold;
+}
+.smo1 {
+  padding-bottom: 22px;
+}
+
+.smo6 {
+  margin-top: 10.5em;
+}
+
+.smo {
+  margin-left: 20px;
+}
+
+.spansmo {
+  margin-left: 10px;
+}
+
+.arrowup {
+  background-color: #606060;
+  border-radius: 5px;
+  padding: 4px;
+  float: right;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.arrowforward {
+  float: right;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.arrowforward.email {
+  margin-top: 12px;
+}
+
+.closemenu {
+  float: right;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.smopeople {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--d-color);
+  margin-top: 16px;
+}
+
+.smopeople li {
+  margin-left: 45px;
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 80;
+}
+
+.avatarOpen {
+  width: 100%;
+  color: var(--w-color);
+  background-color: #4d4c4c;
+  text-align: center;
+  padding: 0.5em 0 0.5em 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.avatarOpen .spanOne {
+  font-size: 0.8em;
+  margin-top: 4px;
+}
+.avatarOpen .spanTwo {
+  font-size: 0.6em;
+  margin-top: 3px;
+}
+.spanOnetwo {
+  display: flex;
+  flex-direction: column;
+  margin-right: 45px;
+  margin-bottom: 3px;
+}
+
+.personalAvatar {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: var(--b-color);
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 3px;
+}
+
+/* usagebilling usagebilling usagebilling usagebilling usagebilling usagebilling usagebilling usagebilling */
+
+/*Organization information box Organization information box Organization information box Organization*/
+.organizationinformationcontent {
+  background-color: var(--w-color);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+textarea,
+input,
+select {
+  width: 100%;
+  border-radius: 5px;
+  font-weight: 545;
+  border: solid 1px;
+  border-color: var(--primary-color);
+  outline: none;
+  resize: none;
+  padding: 0 15px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+textarea {
+  padding: 15px;
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+textarea:placeholder-shown,
+input:placeholder-shown,
+select:placeholder-shown,
+.test-prefix__placeholder
+ {
+  font-style: italic;
+}
+
+.css-xb97g8 {
+  border-radius: 4px !important;
+  width: 17px;
+  height: 17px;
+  margin-top: 3px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding: 0 !important;
+}
+
+/* .test-prefix__control.css-yk16xz-control {
+  margin-top: 10px;
+} */
+
+.css-g1d714-ValueContainer {
+  height: 40px !important;
+  margin-top: -9px !important;
+  margin-left: -2px;
+  /* font-weight: bold; */
+  color:var(--gr-color);
+}
+
+.css-1wa3eu0-placeholder {
+  position: absolute;
+  top: 60% !important;
+}
+
+input,
+select {
+  height: 2rem;
+}
+select {
+  font-size: 14px;
+  font-weight: 440;
+}
+
+button {
+  cursor: pointer;
+}
+
+label {
+  font-size: var(--c-font);
+}
+
+.col1,
+.col2,
+.col3 {
+  width: 31%;
+}
+
+.col1.organizationname {
+  color: red;
+}
+
+.organizationinformationbox {
+  border: 1px solid;
+  border-color: var(--primary-color);
+  border-radius: 5px;
+  width: 100%;
+  height: 20em;
+}
+
+.organizationinformationlabel,
+.planDetailsLabel,
+.currentpaymentmethodlabel,
+.invoiceslabel {
+  color: var(--primary-color);
+  padding-bottom: 20px;
+  font-size: var(--size-font);
+}
+
+.col1,
+.col3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.savebutton Button {
+  float: right;
+  margin-right: 24px;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: var(--primary-color);
+  width: 6.5em;
+  height: 2.5em;
+  color: var(--primary-color);
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+
+/*Plan Details box Plan Details box Plan Details box Plan Details box Plan Details box Plan Details box */
+
+.changeUsagePlan {
+  background-color: var(--w-color);
+  border: 1px solid;
+  border-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+.circularChart {
+  background-color: var(--w-color);
+  border: 1px solid;
+  border-color: var(--primary-color);
+  border-radius: 5px;
+  padding: 5% 2%;
+  text-align: center;
+  display: grid;
+  grid-template-rows: repeat(1,auto);
+}
+
+.planDetailsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 2%;
+  border-radius: 5px;
+}
+
+.changePlan,
+.planUsage {
+  padding: 20px 20px 20px 20px;
+}
+
+.changePlan div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.changePlan div p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.changePlan .expiryDate {
+  margin-left: 36px;
+  font-weight: bold;
+}
+
+.changePlanButton Button {
+  color: white;
+  background-color: var(--g-color);
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.monthlyActiveUserAllowedMonthlyCost {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  width: 70%;
+  font-size: 13px;
+}
+
+.monthlyActiveUserAllowedMonthlyCost div {
+  padding: 5px;
+}
+
+.monthlyActiveUserAllowedMonthlyCost div strong {
+  float: right;
+  margin-right: 110px;
+}
+
+.planUsageApp {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+.planUsageApp div {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+}
+
+.planUsageName {
+  color: var(--gr-color);
+  font-size: 14px;
+}
+
+.application {
+  padding: 10px;
+  border: 1px solid;
+  border-color: var(--primary-color);
+}
+.application div {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.application h6 {
+  font-size: 12px;
+  color: var(--gr-color);
+}
+.application span {
+  font-size: 11px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.application strong {
+  float: right;
+  color: var(--gr-color);
+  font-size: 12px;
+}
+
+.upgradeButton {
+  color: var(--w-color);
+  background-color: var(--b-color);
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 12px;
+}
+.upgradeDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.circularChart .reset {
+  font-size: 12px;
+  color: var(--gr-color);
+}
+
+.circularProgressChart {
+  margin: auto;
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+
+.CircularProgressbar-text {
+  font-weight: bold;
+}
+
+/* Change Plan Button Change Plan Button Change Plan Button Change Plan Button Change Plan Button */
+
+.changeButtonModal {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--w-color);
+  overflow: auto;
+  padding-bottom: 50px;
+}
+.xIcon {
+  background-color: var(--w-color);
+  float: right;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 30px;
+  margin-right: 16px;
+}
+
+.xIconbox {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 0%), 0 -6px 20px 0 rgb(0 0 0 / 15%);
+}
+
+.monthlyAnnually {
+  margin-left: 3.8em;
+}
+
+.monthlyAnnually p {
+  font-size: 12px;
+  color: var(--gr-color);
+  padding-bottom: 10px;
+}
+.maxSlider span {
+  padding: 10px;
+  float: right;
+  font-size: 13px;
+  color: var(--primary-color);
+}
+
+.horizontalGroupButton {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+}
+.horizontalGroupButton button {
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 12px;
+}
+.monthlyActiveUsers {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 20%;
+  margin-left: 30px;
+  font-size: 12px;
+  color: var(--gr-color);
+}
+
+.monthlyActiveUsers span {
+  padding-bottom: 8px;
+}
+.planTypeChange {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-width: 30%;
+  border-radius: 5px;
+  padding: 35px;
+  padding-bottom: 45px;
+  margin-right: 30px;
+  border: var(--w-color);
+}
+
+#standardd:hover {
+  border: 3px solid ;
+  border-color: var(--g-color);
+  transition: all 200ms ease-in-out;
+}
+
+#enterprisee:hover {
+  border: 3px solid;
+  border-color: var(--b-color);
+  transition: all 200ms ease-in-out;
+}
+
+.changeButtonModal h5 {
+  width: 21%;
+  margin: auto;
+  font-size: 16px;
+  margin-top: 28px;
+  margin-bottom: 25px;
+}
+
+.aboveSlider {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px 30px 10px;
+  margin-left: 225px;
+}
+
+.planTypeChangeFirst {
+  margin-left: 10px;
+}
+
+.planTypeChange ul,
+.cancelSubscriptionReasons {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  justify-content: space-between;
+  grid-gap: 10px;
+  list-style-type: disc;
+  font-weight: bold;
+  font-size: 12px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.cancelSubscriptionReasons {
+  margin-left: 0;
+}
+
+.cancelSubscriptionReasons li {
+  list-style-type: none;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: 550;
+  font-size: 13px;
+  padding-left: 10px;
+  color: var(--gr-color);
+}
+
+.cancelSubscriptionReasons li:hover {
+  background-color: #e8e8e8;
+}
+.planTypeChange .textThree {
+  color: #00cc66;
+  font-weight: bold;
+  font-size: 12px;
+  margin-left: 10px;
+}
+.textOne,
+.textTwo,
+.perMonthText {
+  color: var(--primary-color);
+  padding-top: 15px;
+}
+
+.textOne {
+  padding-top: 5px;
+}
+
+.perMonthText,
+.textTwo {
+  font-size: 12px;
+  font-weight: bold;
+}
+.standardEnterprise {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+}
+
+.planTypeChange Button {
+  margin-top: 15px;
+  padding: 8px 28px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.slider {
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.customButton {
+  width: 70px;
+  height: 30px;
+  letter-spacing: 0.5px;
+  background-color: var(--w-color);
+  color: var(--primary-color);
+  font-size: 14px;
+  border: 1.5px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.activeButton {
+  background-color: var(--b-color);
+  color: var(--w-color);
+  border: 1.5px solid var(--primary-color);
+}
+
+.standardMargin {
+  margin-top: 10px;
+}
+.enterpriseMargin {
+  margin-bottom: 20px;
+}
+/* Downgrade Button Downgrade Button Downgrade Button Downgrade Button Downgrade Button */
+
+.downgradePlanButton Button {
+  background-color: var(--rose-color);
+  color: var(--w-color);
+}
+
+.upgradeStandard {
+  background-color: #c9f6c9;
+  color: var(--g-color);
+}
+.currentPlan,
+.newPlan {
+  padding: 30px;
+}
+
+.currentPlan h5,
+.newPlan h5 {
+  color: var(--g-color);
+  padding-bottom: 5px;
+}
+
+.currentPlan div,
+.newPlan div {
+  padding-bottom: 5px;
+  font-size: 13px;
+}
+
+.newPlan p {
+  color: var(--primary-color);
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+.currentPlan .mau,
+.newPlan .mau {
+  color: var(--rose-color);
+}
+
+.currentPlan h4,
+.newPlan h4 {
+  padding-bottom: 5px;
+  color: var(--gr-color);
+  font-size: 14px;
+}
+
+.currentPlan {
+  background-color: #e8e8e8;
+}
+
+.newPlan {
+  background-color: #f8f8f8;
+}
+
+.cancelDowngradeMethod {
+  background-color: #f8f8f8;
+}
+
+/*Current Payment Method Current Payment Method Current Payment Method Current Payment Method */
+
+.updateMethodBox,
+.addPaymentMethodBox {
+  background-color: var(--w-color);
+  border: 1px solid;
+  border-color: var(--primary-color);
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cardHolderData {
+  width: 19%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cardHolderNameNumber {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+}
+
+.cardTypeLast4Digit {
+  color: #202020;
+  font-weight: bold;
+  font-family: var(--c-font);
+}
+
+.cardHolderName {
+  color: var(--primary-color);
+  width: 100%;
+}
+
+.emptyPaymentMethod {
+  color: var(--primary-color);
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+}
+.mdpayment {
+  margin-top: 2%;
+}
+.noPaymentMethod {
+  margin-top: 4%;
+  margin-left: 5%;
+  font-weight: bold;
+}
+.updateMethodButton Button,
+.addPaymentMethodButton Button {
+  float: right;
+  background-color: #00cc66;
+  border-radius: 5px;
+  border: none;
+  padding: 7px;
+  color: var(--w-color);
+  font-weight: bold;
+  margin-top: 10%;
+}
+/* update Method Button update Method Button update Method Button update Method Button */
+
+.updateMethodModal,
+.addMethodModal,
+.downgradeMethodModal,
+.cancelSubscriptionModal,
+.cancelSubscriptionButtonModal {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  outline: none;
+}
+.cancelSubscriptionButtonModal{
+  background-color: var(--w-color);
+}
+.updateMethodBody {
+  padding: 30px;
+}
+
+.updateMethodBody .div {
+  margin-bottom: 18px;
+}
+.cardNumber {
+  width: 50%;
+}
+
+.mm,
+.yy {
+  width: 80%;
+}
+
+.yy {
+  margin-right: 25px;
+}
+.cvv {
+  width: 15%;
+}
+.updateMethodBody div {
+  margin-bottom: 10px;
+}
+
+.mmyy {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.mmyy div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.updateMethodHead,
+.addMethodHead,
+.downgradeMethodHead,
+.cancelSubscriptionHead {
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-bottom: 20px;
+}
+
+.cancelDowngradeMethod,
+.cancleUpdatePayMehtod,
+.cancleUpdateMehtod,
+.doNotCancelSubscription {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  float: right;
+  margin-top: 150px;
+}
+
+.cancleUpdateMehtod {
+  margin-top: 105px;
+}
+
+.cancleUpdateMehtod Button,
+.cancleUpdatePayMehtod Button,
+.cancelDowngradeMethod Button,
+.doNotCancelSubscription Button,
+.closeContinueCancellation Button,
+.cancelSubscriptionButton,
+.doneCancelSubscription {
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.cancelSubscriptionButton {
+  background-color: var(--r-color);
+  color: var(--w-color);
+}
+
+.xUpdatemethod,
+.xAddmethod,
+.xDowngrademethod {
+  background-color: #f8f8f8;
+  margin-bottom: 10px;
+}
+
+.updateMethodHead h5,
+.addMethodHead h5,
+.downgradeMethodHead h5 {
+  color: var(--gr-color);
+  font-size: 14px;
+}
+.cancleUpdate,
+.cancelAdd,
+.cancelDowngrade,
+.closeSubscription,
+.doNotCancel,
+.doneCancelSubscription {
+  border: 1px solid;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.doneCancelSubscription {
+  color: var(--w-color);
+  background-color: var(--g-color);
+  border: none;
+  margin-top: 24em;
+  float: right;
+  margin-right: 2em;
+  /* padding-right: 1.5em;
+  padding-left: 1.5em; */
+  padding: 0.7em 1.5em;
+}
+
+.updateUpdate {
+  color: var(--w-color);
+  background-color: var(--g-color);
+}
+
+/*Add Payment Method Add Payment Method Add Payment Method Add Payment Method*/
+
+.addCardHolderName {
+  width: 60%;
+}
+
+.addCardNumber {
+  width: 60%;
+  margin-right: 10px;
+}
+.visaCardDiv {
+  display: flex;
+  flex-direction: row;
+}
+.visaIcon {
+  margin-top: 3px;
+}
+.visaLabelInput {
+  display: flex;
+  flex-direction: column;
+}
+
+.add1,
+.add3,
+.add4 {
+  padding-left: 30px;
+}
+
+.mmyyAdd {
+  display: flex;
+  flex-direction: row;
+}
+
+.labelMmyyAdd {
+  display: flex;
+  flex-direction: column;
+}
+
+.mmAdd,
+.yyAdd {
+  margin-right: 10px;
+  width: 26%;
+  text-align: center;
+}
+
+.yyAdd {
+  margin-left: 10px;
+  text-align: center;
+}
+
+.expiryDateCvv {
+  display: flex;
+  flex-direction: row;
+}
+
+.cvvCvcAdd {
+  display: flex;
+  flex-direction: column;
+  margin-right: 150px;
+  text-align: center;
+  width: 25%;
+}
+.add2 {
+  margin-top: 10px;
+}
+.visaLabelInput {
+  margin-bottom: 10px;
+}
+.inputButton {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+}
+
+.inputButton input {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border: 1px solid;
+  border-color: var(--rose-color);
+}
+
+.add3 {
+  background-color: #b8b8b8;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.cancleUpdatePayMehtod {
+  margin-top: 90px;
+}
+.add1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#apply {
+  background-color: var(--b-color);
+  color: white;
+  font-weight: bold;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  columns: var(--w-color);
+  padding: 5px 10px;
+  height: 100%;
+}
+
+.updatePayMethod,
+.downgradePlan {
+  color: white;
+  background-color: var(--rose-color);
+}
+
+.textAdd4 {
+  font-size: 12px;
+  padding-top: 20px;
+}
+.textAdd4 .standard {
+  color: var(--g-color);
+  margin-bottom: 10px;
+}
+
+/*Invoices Invoices Invoices Invoices Invoices Invoices Invoices Invoices Invoices Invoices Invoices*/
+
+.tablehead {
+  background-color: #f0f8ff;
+  color: var(--primary-color);
+}
+
+.tablebody {
+  background-color: var(--w-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--gr-color);
+  border-radius: 5px;
+  overflow: hidden;
+  table-layout: auto;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 15px;
+}
+
+#vidown {
+  color: red;
+}
+
+/*save button*/
+.savebutton button {
+  background-color: var(--g-color);
+}
+
+.savebutton button[disabled] {
+  background-color: #eee;
+}
+
+.test-prefix__multi-value__remove {
+  background-color: var(--w-color);
+  margin: 1px;
+  border-radius: 5px;
+  border: 1px solid;
+
+  padding: 2px;
+}
+
+.css-1rhbuit-multiValue {
+  color: grey;
+}
+
+.css-1rhbuit-multiValue.test-prefix__multi-value {
+  background-color: #ebeff4;
+  border-radius: 5px;
+  padding: 4px;
+}
+/* /////////////////////////////////////////////////// Group switch */
+.switches-container {
+  width: 10rem;
+  height: 34px;
+  position: relative;
+  display: flex;
+  padding: 0;
+  position: relative;
+  background: var(--w-color);
+  border: 1px solid;
+  border-color: var(--primary-color);
+  line-height: 2.2rem;
+  border-radius: 5px;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+/* input (radio) for toggling. hidden - use labels for clicking on */
+.switches-container input {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+}
+
+/* labels for the input (radio) boxes - something to click on */
+.switches-container label {
+  width: 50%;
+  padding: 0;
+  margin-bottom: 0;
+  text-align: center;
+  cursor: pointer;
+  color: var(--primary-color);
+  font-size: 16px;
+  /* //////////////////////////// */
+}
+
+/* switch highlighters wrapper (sliding left / right) 
+  - need wrapper to enable the even margins around the highlight box
+*/
+.switch-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  /* padding: 0.15rem; */
+  z-index: 3;
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  /* transition: transform 1s; */
+}
+
+/* switch box highlighter */
+.switch {
+  border-radius: 5px;
+  background: var(--b-color);
+  height: 100%;
+}
+
+/* switch box labels
+  - default setup
+  - toggle afterwards based on radio:checked status 
+*/
+.switch div {
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  display: block;
+  color: white;
+  transition: opacity 0.2s cubic-bezier(0.77, 0, 0.175, 1) 0.125s;
+  will-change: opacity;
+  position: absolute;
+  top: -20;
+  left: 0;
+}
+
+/* slide the switch box from right to left */
+.switches-container input:nth-of-type(1):checked ~ .switch-wrapper {
+  transform: translateX(0%);
+}
+
+/* slide the switch box from left to right */
+.switches-container input:nth-of-type(2):checked ~ .switch-wrapper {
+  transform: translateX(100%);
+}
+
+/* toggle the switch box labels - first checkbox:checked - show first switch div */
+.switches-container
+  input:nth-of-type(1):checked
+  ~ .switch-wrapper
+  .switch
+  div:nth-of-type(1) {
+  opacity: 1;
+}
+
+/* toggle the switch box labels - second checkbox:checked - show second switch div */
+.switches-container
+  input:nth-of-type(2):checked
+  ~ .switch-wrapper
+  .switch
+  div:nth-of-type(2) {
+  opacity: 1;
+}
+
+/* //Open Close menu// */
+.bodyContentOpen {
+  width: 86%;
+  margin-left: 14%;
+  /* transition: all 1s ease-out; */
+}
+
+.navbar {
+  background-color: var(--w-color);
+  color: var(--primary-color);
+  margin-left: 5%;
+  width: 95%;
+  height: 7rem;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 0%), 0 -6px 20px 0 rgb(0 0 0 / 15%);
+  /* transition: all 400ms ease-out; */
+}
+
+.navbarOpen {
+  background-color: var(--w-color);
+  color: var(--primary-color);
+  margin-left: 17%;
+  width: 83%;
+  height: 7rem;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 0%), 0 -6px 20px 0 rgb(0 0 0 / 15%);
+  /* transition: all 450ms ease-out; */
+}
+
+.container {
+  margin-left: 3rem;
+}
+
+.sidemenuopenClose {
+  background-color: #202020;
+  color: var(--w-color);
+  position: absolute;
+  top: 0;
+  width: 0%;
+  display: none;
+
+  transition: width 500ms ease-in;
+}
+.sidemenuopenOpen {
+  background-color: #202020;
+  color: var(--w-color);
+  width: 17%;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  transition: width 500ms ease-out;
+}
+
+.usagebilling {
+  position: absolute;
+  left: 7%;
+  width: 91%;
+  /* transition: all 500ms ease-out; */
+}
+
+#gridcontainer {
+  display: grid;
+  grid-template-areas:
+    "organizationinformation"
+    "plandetails"
+    "currpaymeth"
+    "Invoices";
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-row-gap: 2em;
+  height: 100%;
+  margin-top: 20px;
+  margin-left: 1.2rem;
+  /* padding-bottom: 50px; */
+  /* transition: all 500ms ease-out; */
+}
+
+#gridcontainerOpen {
+  display: grid;
+  grid-template-areas:
+    "organizationinformation"
+    "plandetails"
+    "currpaymeth"
+    "Invoices";
+  grid-template-columns: 95%;
+  grid-template-rows: repeat(4, auto);
+  grid-row-gap: 2em;
+  height: 100%;
+  margin-top: 20px;
+  margin-left: 16rem;
+  padding-bottom: 50px;
+
+  /* transition: all 500ms ease-out; */
+}
+
+/* CancelSubscription CancelSubscription CancelSubscription CancelSubscription */
+
+.cancelSubscription {
+  background-color: var(--w-color);
+  padding: 15px 25px;
+}
+.cancelSubscription div {
+  color: var(--primary-color);
+  margin-top: 10px;
+}
+
+.cancelSubscriptionBody {
+  padding-left: 30px;
+  padding-bottom: 90px;
+  padding-right: 30px;
+}
+
+.cancelSubscriptionBody .divOne {
+  padding-top: 20px;
+  padding-right: 30px;
+}
+
+.cancelSubscriptionBody .divOne b {
+  font-size: 14px;
+}
+
+.cancelSubscriptionBody .divTwo {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  background-color: #d8e2e1;
+  border-radius: 5px;
+  border-left: 5px solid;
+  border-left-color: #538e86;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.cancelSubscriptionBody .divThree {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  background-color: #dbc5f1;
+  border-radius: 5px;
+  border-left: 5px solid;
+  border-left-color: var(--b-color);
+}
+
+.cancelSubscriptionBody .divTwo Button,
+.cancelSubscriptionBody .divThree Button {
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--w-color);
+}
+
+.cancelSubscriptionBody .divTwo Button {
+  background-color: #538e86;
+}
+
+.cancelSubscriptionBody .divThree Button {
+  background-color: var(--g-color);
+}
+
+.continueCancellationButton Button {
+  background-color: var(--r-color);
+  color: var(--w-color);
+  font-weight: bold;
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.closeContinueCancellation {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  margin-top: 60px;
+  margin-right: 20px;
+}
+
+.continueCancellationBody {
+  padding: 20px 20px 0 20px;
+}
+
+.continueCancellationBody .divOne {
+  padding-bottom: 10px;
+  padding-right: 5px;
+  font-size: 12px;
+}
+.divOneStrong {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 13px;
+}
+.continueCancellationBody hr {
+  padding: 0;
+}
+.doNotCancelSubscription {
+  margin-top: 25px;
+}
+
+.doNotCancelSubscription Button {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.cancelSubscriptionButtonBody {
+  padding: 30px;
+}
