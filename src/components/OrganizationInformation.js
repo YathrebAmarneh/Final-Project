@@ -28,14 +28,11 @@ const OrganizationInformation = ({ data }) => {
   const [billingOptions, setBillingOptions] = useState([
     { label: "john@doe.co", value: "john@doe.co" },
   ]);
-  const [isDisabled, setIsDisabled] = useState(true);
+  const [isdisabled, setIsdisabled] = useState(true);
   const [isempty, setIsempty] = useState({});
 
   const onChange = (e) => {
-    console.log(e.target.value);
-    console.log(e.target.name);
-    setIsDisabled(false);
-
+    setIsdisabled(false);
     setFormValue({
       ...formValue,
       [e.target.name]: e.target.value,
@@ -43,11 +40,10 @@ const OrganizationInformation = ({ data }) => {
   };
 
   const onChangeSelect2 = (selectedOption, { name }) => {
-    setIsDisabled(false);
+    setIsdisabled(false);
     if (Array.isArray(selectedOption)) {
       setBillingOptions(selectedOption);
     }
-
     setFormValue({
       ...formValue,
       [name]: selectedOption.map((option) => option.value),
@@ -77,7 +73,7 @@ const OrganizationInformation = ({ data }) => {
       //     return value.length > 0;
       //   })
       // ) {
-      //   setIsDisabled(true);
+      //   setIsdisabled(true);
       // }
     }
   };
@@ -89,13 +85,13 @@ const OrganizationInformation = ({ data }) => {
           Organization Information
         </h5>
         <div className="organizationinformationbox">
-          <form onSubmit={onSubmit}>
+          <form onSubmit={onSubmit} className="organizationinformationform">
             <div className="organizationinformationcontent">
               <div className="col1">
                 <LabelInput
                   name="organizationName"
                   text="Organization Name"
-                  value={data.organization.name}
+                  // value={data.organization.name}
                   onChange={onChange}
                 />
                 <i
@@ -160,7 +156,7 @@ const OrganizationInformation = ({ data }) => {
                   onChange={onChange}
                   name="billingAddress"
                   text="Billing Address"
-                  value={data.organization.billing_address}
+                  // value={data.organization.billing_address}
                   rows="8"
                   cols="40"
                 />
@@ -182,7 +178,7 @@ const OrganizationInformation = ({ data }) => {
                   name="vatNumber"
                   text="VAT Number"
                   placeholder="123 456 789"
-                  value={data.organization.var_number}
+                  // value={data.organization.var_number}
                 />
                 <i
                   style={{
@@ -200,7 +196,7 @@ const OrganizationInformation = ({ data }) => {
                   name="additionalInformation"
                   text="Additional Information"
                   placeholder="Add any additional info here..."
-                  value={data.organization.additional_information}
+                  // value={data.organization.additional_information}
                   rows="4"
                   cols="40"
                 />
@@ -221,8 +217,8 @@ const OrganizationInformation = ({ data }) => {
             </div>
             <div className="savebutton">
               <Button
-                disabled={isDisabled}
-                style={{ backgroundColor: isDisabled ? "#E0E0E0" : "#00cc66" }}
+                disabled={isdisabled}
+                style={{ backgroundColor: isdisabled ? "#E0E0E0" : "#00cc66" }}
                 type="submit"
                 className="button"
                 textButton="Save"

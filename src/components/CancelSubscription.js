@@ -12,7 +12,7 @@ const CancelSubscription = () => {
   return (
     <div className="cancelSubscription">
       <div onClick={() => setmodalIsOPen(true)}>
-        <strong style={{ color: "red", cursor: "pointer", width: "20px" }}>
+        <strong style={{ color: "red", cursor: "pointer", width: "20px", marginLeft: '-28px' }}>
           CANCEL SUBSCRIPTION
         </strong>
       </div>

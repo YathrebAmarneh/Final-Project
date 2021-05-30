@@ -259,6 +259,13 @@ ul a {
 /* usagebilling usagebilling usagebilling usagebilling usagebilling usagebilling usagebilling usagebilling */
 
 /*Organization information box Organization information box Organization information box Organization*/
+
+.organizationinformationform{
+border: 1px solid var(--primary-color);
+padding-bottom: 4em;
+border-radius: 5px;
+}
+
 .organizationinformationcontent {
   background-color: var(--w-color);
   border-top-right-radius: 5px;
@@ -274,7 +281,8 @@ input,
 select {
   width: 100%;
   border-radius: 5px;
-  font-weight: 545;
+  font-weight: bold;
+  color: var(--gr-color);
   border: solid 1px;
   border-color: var(--primary-color);
   outline: none;
@@ -296,6 +304,7 @@ select:placeholder-shown,
 .test-prefix__placeholder
  {
   font-style: italic;
+  font-weight: normal;
 }
 
 .css-xb97g8 {
@@ -307,10 +316,6 @@ select:placeholder-shown,
   padding-right: 0 !important;
   padding: 0 !important;
 }
-
-/* .test-prefix__control.css-yk16xz-control {
-  margin-top: 10px;
-} */
 
 .css-g1d714-ValueContainer {
   height: 40px !important;
@@ -331,7 +336,8 @@ select {
 }
 select {
   font-size: 14px;
-  font-weight: 440;
+  font-weight: bold;
+  color: var(--gr-color);
 }
 
 button {
@@ -353,7 +359,7 @@ label {
 }
 
 .organizationinformationbox {
-  border: 1px solid;
+  /* border: 1px solid; */
   border-color: var(--primary-color);
   border-radius: 5px;
   width: 100%;
@@ -1165,6 +1171,8 @@ td {
   background-color: #ebeff4;
   border-radius: 5px;
   padding: 4px;
+  font-weight: bold;
+  color: var(--gr-color);
 }
 /* /////////////////////////////////////////////////// Group switch */
 .switches-container {

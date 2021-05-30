@@ -19,30 +19,32 @@ const HorizontalButtonGroup = ({ buttons, onClick, perMonthCost }) => {
           name="switchPlan"
           value="Annually"
         />
-        <label for="switchMonthly">Monthly</label>
+        <label
+          for="switchMonthly"
+          onClick={() => {
+            onClick("monthly");
+          }}
+        >
+          Monthly
+        </label>
         <Tippy
           placement="right"
           content={<span style={{ color: "#fff" }}>SAVE 15%</span>}
         >
-          <label for="switchAnnually">Annually</label>
+          <label
+            for="switchAnnually"
+            onClick={() => {
+              onClick("yearly");
+            }}
+          >
+            Annually
+          </label>
         </Tippy>
         <div class="switch-wrapper">
           <div class="switch">
-            <div
-              onClick={() => {
-                onClick("monthly");
-              }}
-            >
-              Monthly
-            </div>
+            <div>Monthly</div>
 
-            <div
-              onClick={() => {
-                onClick("yearly");
-              }}
-            >
-              Annually
-            </div>
+            <div>Annually</div>
           </div>
         </div>
       </div>

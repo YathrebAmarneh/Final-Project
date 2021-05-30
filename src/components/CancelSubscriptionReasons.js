@@ -12,16 +12,16 @@ const CancelSubscriptionReasons = ({ cancelSubscriptionReasons }) => {
         {cancelSubscriptionReasons.map((reason, index) => (
           <li 
           key={index}
-          style={{backgroundColor: isselected && 'red'}}
-          onClick={(e) => {setIsselected(true)
-          console.log('e',e.target)}
-          }
+          // style={{backgroundColor: isselected && 'red'}}
+          // onClick={(e) => {setIsselected(true)
+          // console.log('e',e.target)}
+          // }
           >
             {reason}
           </li>
         ))}
       </ul>
-      <Input placeholder="Other"/>
+      <Input placeholder="Other" style={{border:'none'}}/>
     </div>
   );
 };
