@@ -12,8 +12,8 @@ const ChangePlanButton = ({ data, numberWithCommas }) => {
   // const mua = "10000";
   const [sliderValue, setSliderValue] = useState(mua);
   // console.log("sliderValue", sliderValue);
-  // const plan_type = data.organization.plan_details.plan_type;
-  const plan_type = "standard";
+  const plan_type = data.organization.plan_details.plan_type;
+  // const plan_type = "standard";
   // const plan_type = "enterprise";
 
   const standard_features = [
