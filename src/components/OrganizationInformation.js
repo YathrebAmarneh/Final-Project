@@ -91,7 +91,7 @@ const OrganizationInformation = ({ data }) => {
                 <LabelInput
                   name="organizationName"
                   text="Organization Name"
-                  // value={data.organization.name}
+                  value={data.organization.name}
                   onChange={onChange}
                 />
                 <i
@@ -156,7 +156,7 @@ const OrganizationInformation = ({ data }) => {
                   onChange={onChange}
                   name="billingAddress"
                   text="Billing Address"
-                  // value={data.organization.billing_address}
+                  value={data.organization.billing_address}
                   rows="8"
                   cols="40"
                 />
@@ -178,7 +178,7 @@ const OrganizationInformation = ({ data }) => {
                   name="vatNumber"
                   text="VAT Number"
                   placeholder="123 456 789"
-                  // value={data.organization.var_number}
+                  value={data.organization.var_number}
                 />
                 <i
                   style={{
@@ -196,7 +196,7 @@ const OrganizationInformation = ({ data }) => {
                   name="additionalInformation"
                   text="Additional Information"
                   placeholder="Add any additional info here..."
-                  // value={data.organization.additional_information}
+                  value={data.organization.additional_information}
                   rows="4"
                   cols="40"
                 />
